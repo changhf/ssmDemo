@@ -1,0 +1,14 @@
+####mybatis-spring版本冲突问题
+```
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis-spring</artifactId>
+    <version>1.3.0</version>
+</dependency>
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis</artifactId>
+    <version>3.4.2</version>
+</dependency>
+```
+mybatis-spring采用1.3.0以上版本，springframework可以采用4.3以上版本

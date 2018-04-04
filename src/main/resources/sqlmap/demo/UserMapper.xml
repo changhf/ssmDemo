@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.changhf.dao.DemoDao">
+    <resultMap id="BaseMap" type="com.changhf.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="mobile" jdbcType="VARCHAR" property="mobile"/>
+        <result column="add_time" jdbcType="VARCHAR" property="addTime"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="salt" jdbcType="VARCHAR" property="salt"/>
+    </resultMap>
+    <insert id="insert" parameterType="com.changhf.entity.User">
+        INSERT INTO c_user (user_name, mobile)
+        VALUES (#{userName,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR})
+    </insert>
+</mapper>
